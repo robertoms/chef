@@ -1,0 +1,51 @@
+E, [2017-06-08T01:02:44.373170 #25812] ERROR -- default-centos-72: Converge failed on instance <default-centos-72>.
+E, [2017-06-08T01:02:44.373287 #25812] ERROR -- default-centos-72: ------Exception-------
+E, [2017-06-08T01:02:44.373306 #25812] ERROR -- default-centos-72: Class: Kitchen::ActionFailed
+E, [2017-06-08T01:02:44.373318 #25812] ERROR -- default-centos-72: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
+']
+E, [2017-06-08T01:02:44.373329 #25812] ERROR -- default-centos-72: ----------------------
+E, [2017-06-08T01:02:44.373338 #25812] ERROR -- default-centos-72: ------Backtrace-------
+E, [2017-06-08T01:02:44.373347 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/provisioner/base.rb:86:in `rescue in call'
+E, [2017-06-08T01:02:44.373357 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/provisioner/base.rb:89:in `call'
+E, [2017-06-08T01:02:44.373367 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:373:in `block in converge_action'
+E, [2017-06-08T01:02:44.373412 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:513:in `call'
+E, [2017-06-08T01:02:44.373424 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:513:in `synchronize_or_call'
+E, [2017-06-08T01:02:44.373445 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:478:in `block in action'
+E, [2017-06-08T01:02:44.373455 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2017-06-08T01:02:44.373465 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:477:in `action'
+E, [2017-06-08T01:02:44.373474 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:369:in `converge_action'
+E, [2017-06-08T01:02:44.373483 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2017-06-08T01:02:44.373492 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:347:in `each'
+E, [2017-06-08T01:02:44.373501 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2017-06-08T01:02:44.373510 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:160:in `verify'
+E, [2017-06-08T01:02:44.373520 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:201:in `public_send'
+E, [2017-06-08T01:02:44.373529 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2017-06-08T01:02:44.373538 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2017-06-08T01:02:44.373548 #25812] ERROR -- default-centos-72: ----End Backtrace-----
+E, [2017-06-08T01:02:44.373556 #25812] ERROR -- default-centos-72: ---Nested Exception---
+E, [2017-06-08T01:02:44.373565 #25812] ERROR -- default-centos-72: Class: Kitchen::Transport::SshFailed
+E, [2017-06-08T01:02:44.373574 #25812] ERROR -- default-centos-72: Message: SSH exited (1) for command: [sh -c '
+TEST_KITCHEN="1"; export TEST_KITCHEN
+sudo -E /opt/chef/bin/chef-client --local-mode --config /tmp/kitchen/client.rb --log_level auto --force-formatter --no-color --json-attributes /tmp/kitchen/dna.json --chef-zero-port 8889 
+']
+E, [2017-06-08T01:02:44.373586 #25812] ERROR -- default-centos-72: ----------------------
+E, [2017-06-08T01:02:44.373596 #25812] ERROR -- default-centos-72: ------Backtrace-------
+E, [2017-06-08T01:02:44.373605 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/provisioner/base.rb:86:in `rescue in call'
+E, [2017-06-08T01:02:44.373614 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/provisioner/base.rb:89:in `call'
+E, [2017-06-08T01:02:44.373636 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:373:in `block in converge_action'
+E, [2017-06-08T01:02:44.373645 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:513:in `call'
+E, [2017-06-08T01:02:44.373654 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:513:in `synchronize_or_call'
+E, [2017-06-08T01:02:44.373663 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:478:in `block in action'
+E, [2017-06-08T01:02:44.373672 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/2.1.0/benchmark.rb:279:in `measure'
+E, [2017-06-08T01:02:44.373681 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:477:in `action'
+E, [2017-06-08T01:02:44.373690 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:369:in `converge_action'
+E, [2017-06-08T01:02:44.373699 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:348:in `block in transition_to'
+E, [2017-06-08T01:02:44.373708 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:347:in `each'
+E, [2017-06-08T01:02:44.373717 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:347:in `transition_to'
+E, [2017-06-08T01:02:44.373726 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/instance.rb:160:in `verify'
+E, [2017-06-08T01:02:44.373735 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:201:in `public_send'
+E, [2017-06-08T01:02:44.373744 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:201:in `run_action_in_thread'
+E, [2017-06-08T01:02:44.373753 #25812] ERROR -- default-centos-72: /opt/chefdk/embedded/lib/ruby/gems/2.1.0/gems/test-kitchen-1.11.1/lib/kitchen/command.rb:173:in `block (2 levels) in run_action'
+E, [2017-06-08T01:02:44.373762 #25812] ERROR -- default-centos-72: ----End Backtrace-----
